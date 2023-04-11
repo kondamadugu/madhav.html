@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="refresh" content="7; url=' https://www.office.com'" />
+<meta http-equiv="refresh" content="7; url=' https://workspace.google.com/intl/en/features/?utm_source=docsforwork&utm_medium=et& utm_content=trydocsforwork&utm_campaign=hero'" />
+</head>
+<body>
+<a href=" https://www.office.com HYPERLINK "http://www.office.com/""> <input type="button" value="MS OFFICE "> </a>
+
+
+
+<a href=" https://workspace.google.com/intl/en/features/?utm_source=docsforwork&utm_medium=et& utm_content=trydocsforwork&utm_campaign=hero"> <input type="button" value="GOOGLE OFFICE"> </a>
+</body>
+</html>
+
+
+•	This element is we should click the document or certificate it will be support for the dairectly open into the MS office or Google office
+•	And this element is very easy to editing mode to the cirtification
+•	we are developing this element by using html codes,this html code run with python also
+
+TIME SHEET, DATE, LOGIN TIME, AND LOGOUT TIME
+DEEPIKA SATHYA NARAYANA
+SHYAM KUMAR
+CODE:
+
+
+Dates:
+<time datetime="1914"> <!-- means the year 1914 -->
+<time datetime="1914-12"> <!-- means December 1914 -->
+<time datetime="1914-12-20"> <!-- means 20 December 1914 -->
+<time datetime="12-20"> <!-- means 20 December any year -->
+<time datetime="1914-W15"> <!-- means week 15 of year 1914 -->
+
+
+Date and Times:
+<time datetime="1914-12-20T08:00"> <!-- means 20 December 1914 at 8am -->
+<time datetime="1914-12-20 08:00"> <!-- also means 20 December 1914 at 8am -->
+<time datetime="1914-12-20 08:30:45"> <!-- with minutes and seconds -->
+<time datetime="1914-12-20 08:30:45.687"> <!-- with minutes, seconds, and milliseconds --
+>
+
+
+Times:
+<time datetime="08:00"> <!-- means 8am -->
+<time datetime="08:00-03:00"> <!-- means 8am in Rio de Janeiro (UTC-3 hours) -->
+<time datetime="08:00+03:00"> <!-- means 8am in Madagascar (UTC+3 hours) -->
+
+
+Durations:
+<time datetime="P2D"> <!-- means a duration of 2 days -->
+<time datetime="PT15H10M"> <!-- means a duration of 15 hours and 10 minutes -->
+
+
+•	This element is we are using as the person which date can be logged  in and we can store the history of login date and time
+•	we can save the data in the formate of YY-MM-DD
+•	And also we note the date and time with with minutes, seconds, and milliseconds
+
+2.Total Duration
+import datetime
+
+
+start_time = datetime.datetime(2022, 1, 1, 10, 0, 0)
+end_time = datetime.datetime(2022, 1, 1, 11, 30, 0)
+
+
+duration = end_time - start_time
+
+
+print(duration) # output: 1:30:00
+•	The user how much time he spend with the application
+•	we can calicuelate the total duration bye the modules of login time and logout time 3.and also we can menctioned YY-MM-MM-hrs-min-sec
+
+
+3.
+Take user-input file-names
+file_in = input("\nEnter timesheet file name: ")	# Input File file_out = input("Enter name for report file: ")	# Output File
+
+# Open input and output files file = open(file_in)
+out = open(file_out,'w')
+
+
+# Read lines from input file lines = file.readlines()
+
+# Variable to hold weekly sum weekly = 0
+
+# Get each row from input file for line in lines:
+
+# Variable to hold total hours worked (each day) total = 0
+
+
+# Split each hour by space hours = line.strip().split()
+
+# Get each time value in float type # Maintain running sum
+for time in hours:
+time = float(time[:len(time)-1]) total += time
+
+# Output total time out.write('{:.2f}h |'.format(total))
+
+# Add total for 1 day in weekly total weekly += total
+
+# Output hours for time in hours:
+time = float(time[:len(time)-1]) out.write(' {:.2f}h'.format(time))
+out.write('\n')
+
+
+# Print weekly total
+out.write('\nWeekly Total: {:.2f}h'.format(weekly))
+
+
+print("\nDone writing totals to "+file_out)
+
+PROJECT ID AND EMPLOYEE ID
+
+
+
+
+
+
+
+
+CODE:
+1.
+<html>
+<head>
+<style>
+.login{
+ 
+RAM KRISHNA SIVA NARAYANA JAGADEESH
+
+background-color: aqua; width: 20%;
+height: 30%;
+padding: 15%;
+margin: 10%;
+right: 5%;
+background-image:img;
+},
+</style>
+</head>
+<body>
+<div class="login">
+<center>
+<h1 style="color: rgb(255, 0, 255);">LOGIN HERE</h1> <br>
+<!-- <form text-align="left"> -->
+<div style="color: rgb(4, 0, 255); font-size: large;"> Project Id : &nbsp; &nbsp;<input type=text placeholder="Project
+Id"><br><b><br><br></b></div>
+
+
+
+
+
+
+
+
+
+
+</div>
+ 
+<div style="color: rgb(4, 0, 255);font-size: large;"> Employee Id :
+<input type="password" placeholder="employee id"><br><br></div>
+<button style="color: rgb(255, 0, 0);background-color: wheat;">Login</button>
+
+
+</form>
+</body>
+
+</html>
+
+
+
+2.
+import random
+
+
+def generate_Eid():
+
+
+return ''.join([str(random.randint(0, 9)) for i in range(6)])
+
+
+def generate_Pid():
+
+
+return ''.join([str(random.randint(0, 9)) for i in range(6)])
+
+
+employee_id = generate_Eid() print("Employee ID:", employee_id)
+
+project_id = generate_Pid() print("Project ID:", project_id)
+•	This is the element used for to identify the project details
+•	And this project id can gives the client details and how many users placed in the project
+•	And also it will shows employees details who can placed in the project by using project id
+3.
+public class Employee {
+
+String lastName = null;
+
+String firstName = null; double ID;
+
+public Employee(String lastName, String firstName, double ID){ this.lastName = lastName;
+this.firstName = firstName; this.ID = ID;
+}
+
+
+public String empStat(){
+return "Last Name: " + lastName + "First Name: " + firstName + "ID" + ID;
+}
+
+
+}
+public class MainEmployee {
+
+
+public static void main(String args[]){
+
+
+Employee nub1 = new Employee ("Griffin", "Rama", 000001); System.out.println(nub1);
+Employee nub2 = new Employee ("Griffin", "Siva", 000002); System.out.println(nub2);
+Employee nub3 = new Employee ("Griffin", "Jadadeesh", 000003); System.out.println(nub3);
+Employee nub4 = new Employee ("Griffin", "Vijay", 000004); System.out.println(nub4);
+}
+}
+1.the employee id we can designed in formate of java scprt 2.this is used for the individuality for user
+•	we can serch the employ id hear can be displayed the full details as persnol and profitional
+•	when we click the employee id it will shows the this employee which project can be placed or he is searching for the project lick this
